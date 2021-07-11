@@ -10,8 +10,6 @@ hambuger.addEventListener('click', (e) => {
 let textDisplay = document.getElementById('typer');
 let phrases = [
 	'A Professional Fullstack Software Developer',
-	'An Interactive Front-End Developer',
-	'An Innovative Educator',
 	'A Customer Experience Management Professional',
 ];
 let currentPhrase = [];
@@ -76,3 +74,41 @@ const getRepo = async () => {
 };
 
 getRepo();
+
+//process contact me form
+
+document.getElementById('send').addEventListener('click', async (e) => {
+	e.preventDefault();
+	let name = document.getElementById('name').value;
+	let email = document.getElementById('email').value;
+	let message = document.getElementById('message').value;
+    
+    if(name == "" || email =="" || message==""){
+        alert("Please fill the form completely")
+    }else {
+
+		document.getElementById('name').value ="";
+	document.getElementById('email').value="";
+	document.getElementById('message').value="";
+    document.getElementById('send').innerHTML="Sending...."
+	document.getElementById('send').disabled=true;
+	
+        	Email.send({
+		SecureToken: '19789b5e-8036-40a9-a0f7-df253a01d955',
+		To: 'igbinobaroosaretin@gmail.com',
+		From: 'osaretin@igbinobaro.com.ng',
+		Subject: 'Contact from igbinobaro.com.ng',
+		Body: `<html><h2>From:${name} </h2><p><small>${email}</small></p><p><em>${message}</em></p></html>`,
+		
+	
+	
+	}).then(() => {
+		alert('mail sent successfully, Expect a response soon.')
+		document.getElementById('send').innerHTML="send"
+	document.getElementById('send').disabled=false}
+	);
+    }
+
+
+
+});

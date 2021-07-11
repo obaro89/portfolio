@@ -38,9 +38,7 @@
 								<a href="#skill"><i class="fas fa-praying-hands"></i>Skills</a>
 							</li>
 							<li>
-								<a href="#portfolio"
-									><i class="fas fa-briefcase"></i>Portfolio</a
-								>
+								<a href="#portfolio"><i class="fas fa-briefcase"></i>Repos</a>
 							</li>
 							<li>
 								<a href="#services"
@@ -68,9 +66,8 @@
 							><span id="blink"></span>
 						</h1>
 						<p class="white marked margintop">
-							A Nigerian based software developer that builds scalable and
-							secure enterprise applications with the latest cutting edge
-							technologies
+							A Nigeria based software developer that builds scalable and secure
+							enterprise applications with the latest cutting edge technologies
 						</p>
 						<p class="margintop hireme">
 							<a href="#contact" class="btn-primary btn">Hire Me</a>
@@ -162,13 +159,13 @@
 				<div class="flexskill">
 					<form class="contactitems contactform">
 						<p>
-							<input type="text" placeholder="Name" id="name" />
+							<input type="text" placeholder="Name" id="name" required />
 						</p>
 						<p>
-							<input type="email" placeholder="Email" id="email" />
+							<input type="email" placeholder="Email" id="email" required />
 						</p>
 						<p class="textarea">
-							<textarea placeholder="Message" id="message"></textarea>
+							<textarea placeholder="Message" id="message" required></textarea>
 						</p>
 						<p>
 							<button id="send">Send Message</button>
@@ -189,7 +186,7 @@
 				</div>
 			</div>
 		</section>
-
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>
